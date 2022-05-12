@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">co.com.choucair.reto using Serenity and Cucumber</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="2588acfb73a44f92000e43204bdc13c270db631fc647ea6112c5b230e06093ae.html">Buy Cell Phone</a></span>
+                > <span class="truncate-60"><a
+                    href="2a80152bba1d1279cfa8f6bd04d452125a65699bcfcc15355c5be8b231b907f1.html">standard user product selection </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 11-05-2022 21:06</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Buy Cell Phone </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a user, I want to buy a cell phone Celular on the falabella web portal
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="e4ef4831a220e0a9cbdbfec794f5c31b3fef2adf1cb8126df1cc35a6f525969c.html">Scenario1
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="8e3b9bd5eba0a2d944ce7d2a73335e57289cd25f71e556e1618e946dc87d7ec9.html">Stories
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">standard user product selection
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="d0525bf56fbaf45382f3bb9ea5679314273631947056fb1989baf211930a3f82.png" title=" Given that a user enters the falabella web portal" width="1034"/>
+                <img src="d0525bf56fbaf45382f3bb9ea5679314273631947056fb1989baf211930a3f82.png" title=" User open up" width="1034"/>
+                <img src="d0525bf56fbaf45382f3bb9ea5679314273631947056fb1989baf211930a3f82.png" title=" User opens the Sistecredito reto page" width="1034"/>
+                <img src="d0525bf56fbaf45382f3bb9ea5679314273631947056fb1989baf211930a3f82.png" title=" User open up (completed)" width="1034"/>
+                <img src="d0525bf56fbaf45382f3bb9ea5679314273631947056fb1989baf211930a3f82.png" title=" Given that a user enters the falabella web portal (completed)" width="1034"/>
+                <img src="d3892509f84ef08793294f51e79671d03e48e20e2f920f4940fb79f4689f7bf4.png" title=" When the pop-up is opened the user closes it" width="1034"/>
+                <img src="d3892509f84ef08793294f51e79671d03e48e20e2f920f4940fb79f4689f7bf4.png" title=" User refreshes the browser" width="1034"/>
+                <img src="d3892509f84ef08793294f51e79671d03e48e20e2f920f4940fb79f4689f7bf4.png" title=" When the pop-up is opened the user closes it (completed)" width="1034"/>
+                <img src="b18772efe59946fbb8553ec984adb38b6c8bb83eb482143d437baf8be7026663.png" title=" And he searchs Celular Samsung Galaxy A32 128GB on the portal web" width="1034"/>
+                <img src="b18772efe59946fbb8553ec984adb38b6c8bb83eb482143d437baf8be7026663.png" title=" User search" width="1034"/>
+                <img src="b18772efe59946fbb8553ec984adb38b6c8bb83eb482143d437baf8be7026663.png" title=" User enters 'Celular Samsung Galaxy A32 128GB' into ingresar nombre" width="1034"/>
+                <img src="ff0a202da2f872c1b0b89d353d5170b19995cbe7c9e14149ab436c17e5411558.png" title=" User types 'ENTER' in ingresar nombre" width="1034"/>
+                <img src="ff0a202da2f872c1b0b89d353d5170b19995cbe7c9e14149ab436c17e5411558.png" title=" User search (completed)" width="1034"/>
+                <img src="ff0a202da2f872c1b0b89d353d5170b19995cbe7c9e14149ab436c17e5411558.png" title=" And he searchs Celular Samsung Galaxy A32 128GB on the portal web (completed)" width="1034"/>
+                <img src="ce1e2b853dcf9abccbc8995fcc7e63cacffbe6f4de759e21a60633826eed6742.png" title=" And add the bag" width="1034"/>
+                <img src="ce1e2b853dcf9abccbc8995fcc7e63cacffbe6f4de759e21a60633826eed6742.png" title=" User add bag" width="1034"/>
+                <img src="ce1e2b853dcf9abccbc8995fcc7e63cacffbe6f4de759e21a60633826eed6742.png" title=" User clicks on select phone" width="1034"/>
+                <img src="ce1e2b853dcf9abccbc8995fcc7e63cacffbe6f4de759e21a60633826eed6742.png" title=" User add bag (completed)" width="1034"/>
+                <img src="ce1e2b853dcf9abccbc8995fcc7e63cacffbe6f4de759e21a60633826eed6742.png" title=" And add the bag (completed)" width="1034"/>
+                <img src="bad9847961ce71a9ef6c877f4fa23394e62f876342e0850b4260408c06d8a98a.png" title=" And click in button Ver Bolsa de Compras" width="1034"/>
+                <img src="bad9847961ce71a9ef6c877f4fa23394e62f876342e0850b4260408c06d8a98a.png" title=" User go cart" width="1034"/>
+                <img src="bad9847961ce71a9ef6c877f4fa23394e62f876342e0850b4260408c06d8a98a.png" title=" User clicks on see bag with product" width="1034"/>
+                <img src="bad9847961ce71a9ef6c877f4fa23394e62f876342e0850b4260408c06d8a98a.png" title=" User go cart (completed)" width="1034"/>
+                <img src="bad9847961ce71a9ef6c877f4fa23394e62f876342e0850b4260408c06d8a98a.png" title=" And click in button Ver Bolsa de Compras (completed)" width="1034"/>
+                <img src="49445a3282b558453e5c68288cb67ba42710d64610ef3778608fdc02339a63be.png" title=" And check item selection" width="1034"/>
+                <img src="49445a3282b558453e5c68288cb67ba42710d64610ef3778608fdc02339a63be.png" title=" User go pay" width="1034"/>
+                <img src="49445a3282b558453e5c68288cb67ba42710d64610ef3778608fdc02339a63be.png" title=" User clicks on go to pay" width="1034"/>
+                <img src="49445a3282b558453e5c68288cb67ba42710d64610ef3778608fdc02339a63be.png" title=" User go pay (completed)" width="1034"/>
+                <img src="49445a3282b558453e5c68288cb67ba42710d64610ef3778608fdc02339a63be.png" title=" And check item selection (completed)" width="1034"/>
+                <img src="d5e87edc6c1b37e2ea8ba2ac70d488e566b2b73b2fee54b52a0d217dc6879533.png" title=" And fill form delivery" width="1034"/>
+                <img src="d5e87edc6c1b37e2ea8ba2ac70d488e566b2b73b2fee54b52a0d217dc6879533.png" title=" User delivery data" width="1034"/>
+                <img src="d5e87edc6c1b37e2ea8ba2ac70d488e566b2b73b2fee54b52a0d217dc6879533.png" title=" User clicks on select region" width="1034"/>
+                <img src="65816d87507de77d189bf0ab7845e37f38522f7c80a933b68e4b270aeb8910ca.png" title=" User clicks on select option Antioquia" width="1034"/>
+                <img src="4dc43252369ecc3e4099f2858ffded93c09c09b024014c24b2bc8f82178a1a81.png" title=" User clicks on select city" width="1034"/>
+                <img src="5531509ac0f31dc2db76f4b07453343a45c946fd2ac45dc42056269afb5879fa.png" title=" User clicks on select option Medellin" width="1034"/>
+                <img src="5a8ede8e1b7872458bce912dd561baa62689edf8885ae3d427ddeb36c2080bb9.png" title=" User clicks on select district" width="1034"/>
+                <img src="2ec7d4ba9c06a7df4d6b84c6396c3795f2b76c136ea55e01263e2ca3c3fb1534.png" title=" User clicks on select option Medellin" width="1034"/>
+                <img src="a33f9428b390aa85da940f4525e9278e1be030c8eff5b7528c72e84c0ba0711f.png" title=" User clicks on continue" width="1034"/>
+                <img src="a33f9428b390aa85da940f4525e9278e1be030c8eff5b7528c72e84c0ba0711f.png" title=" User delivery data (completed)" width="1034"/>
+                <img src="a33f9428b390aa85da940f4525e9278e1be030c8eff5b7528c72e84c0ba0711f.png" title=" And fill form delivery (completed)" width="1034"/>
+                <img src="8533242f4d9c3bee866910928db3fef42c05f2a66e3056bcb18ea154607cb599.png" title=" And data for the shipment address Av Siempre Viva, type Apartamento and continue" width="1034"/>
+                <img src="8533242f4d9c3bee866910928db3fef42c05f2a66e3056bcb18ea154607cb599.png" title=" User address" width="1034"/>
+                <img src="8533242f4d9c3bee866910928db3fef42c05f2a66e3056bcb18ea154607cb599.png" title=" User enters 'Av Siempre Viva' into input address" width="1034"/>
+                <img src="8e8f7fb8c1f1479d45057e5453d19a23d75dcb43f6449a0e459cf398b7fdd643.png" title=" User enters 'Apartamento' into input type home" width="1034"/>
+                <img src="131e9a0224d0dc8e8e9863e259bcfa58d4d9ba2cf3451e3dfc4aef599f2d263b.png" title=" User clicks on button useAddress" width="1034"/>
+                <img src="131e9a0224d0dc8e8e9863e259bcfa58d4d9ba2cf3451e3dfc4aef599f2d263b.png" title=" User address (completed)" width="1034"/>
+                <img src="131e9a0224d0dc8e8e9863e259bcfa58d4d9ba2cf3451e3dfc4aef599f2d263b.png" title=" And data for the shipment address Av Siempre Viva, type Apartamento and continue (completed)" width="1034"/>
+                <img src="9fcedb2fa419463f9866314df7eb6095d96983002c13aad7a306230dcc6d0e07.png" title=" And continue payment" width="1034"/>
+                <img src="9fcedb2fa419463f9866314df7eb6095d96983002c13aad7a306230dcc6d0e07.png" title=" User pay final" width="1034"/>
+                <img src="9fcedb2fa419463f9866314df7eb6095d96983002c13aad7a306230dcc6d0e07.png" title=" User clicks on continue payment" width="1034"/>
+                <img src="9fcedb2fa419463f9866314df7eb6095d96983002c13aad7a306230dcc6d0e07.png" title=" User pay final (completed)" width="1034"/>
+                <img src="9fcedb2fa419463f9866314df7eb6095d96983002c13aad7a306230dcc6d0e07.png" title=" And continue payment (completed)" width="1034"/>
+                <img src="66656a072f5928b2e18a210953dbb9e7a9d30bea2301b443b175bd217e5992ed.png" title=" Then Validate message payment Elige tu medio de pago" width="1034"/>
+                <img src="66656a072f5928b2e18a210953dbb9e7a9d30bea2301b443b175bd217e5992ed.png" title=" Then answer" width="1034"/>
+                <img src="66656a072f5928b2e18a210953dbb9e7a9d30bea2301b443b175bd217e5992ed.png" title=" Then Validate message payment Elige tu medio de pago (completed): <span class='success-color'>SUCCESS</span>" width="1034"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.5</span>
+</div>
+</body>
+</html>
