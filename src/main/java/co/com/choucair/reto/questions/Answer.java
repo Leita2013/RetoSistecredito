@@ -1,7 +1,7 @@
 package co.com.choucair.reto.questions;
 
 import co.com.choucair.reto.tasks.Action;
-import co.com.choucair.reto.userinterface.CheckOutPage;
+import co.com.choucair.reto.userinterfaces.CheckOutPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;

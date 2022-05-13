@@ -1,6 +1,6 @@
 package co.com.choucair.reto.tasks;
 
-import co.com.choucair.reto.userinterface.PayPage;
+import co.com.choucair.reto.userinterfaces.PayPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;

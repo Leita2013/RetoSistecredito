@@ -1,6 +1,6 @@
 package co.com.choucair.reto.tasks;
 
-import co.com.choucair.reto.userinterface.FillForm;
+import co.com.choucair.reto.userinterfaces.FillForm;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;

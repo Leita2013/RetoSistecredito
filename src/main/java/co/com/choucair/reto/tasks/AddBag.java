@@ -1,6 +1,6 @@
 package co.com.choucair.reto.tasks;
 
-import co.com.choucair.reto.userinterface.SelectItem;
+import co.com.choucair.reto.userinterfaces.SelectItem;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
